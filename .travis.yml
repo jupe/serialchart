@@ -3,6 +3,6 @@ before_install:
     - sudo apt-get update -qq
     - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev
 script:
-    - qmake -qt=qt5 -v -o ./src/Makefile ./src/SerialChart.pro
-    - qmake -qt=qt5 -o ./src/Makefile ./src/SerialChart.pro
-    - make -C ./src
+    - cd src&&qmake -qt=qt5 -v -o ./Makefile ./SerialChart.pro
+    - qmake -qt=qt5 -o ./Makefile ./SerialChart.pro
+    - make
