@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QtWidgets/QMainWindow.h>
+#include <QtWidgets/QMainWindow>
 #include "common.h"
 #include "portbase.h"
 #include "decoderbase.h"
