@@ -3,6 +3,6 @@ before_install:
     - sudo apt-get update -qq
     - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev
 script:
-    - qmake -qt=qt5 -v
-    - qmake -qt=qt5
+    - qmake -qt=qt5 -v -C ./src
+    - qmake -qt=qt5 -C ./src
     - make -C ./src
