@@ -1,2 +1,7 @@
 # serialchart
-Serial Chart - Analyse and chart serial data from RS-232 COM ports
+
+Open source application for charting data sent via RS-232 port in real time.
+
+For configuration file syntax see: ConfigurationFileSyntax
+
+Created with Qt5.2
