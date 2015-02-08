@@ -5,8 +5,8 @@ before_install:
     #libqt5serialport5-dev 
     #- precise not contains this package :/
 script:
-    - cd src&&qmake -qt=qt5 -v -o ./Makefile ./SerialChart.pro
-    - qmake -qt=qt5 -o ./Makefile ./SerialChart.pro
+    - cd src
+    #- qmake -qt=qt5 -v -o ./Makefile ./SerialChart.pro
     #- make - as soon as travis change ubuntu 14.04 + qt>=5.2 is supported...
 #deploy:
 #  provider: releases
