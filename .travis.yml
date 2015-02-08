@@ -2,6 +2,12 @@ before_install:
     - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
     - sudo apt-get update -qq
     - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev 
+    - mkdir mkdir serialport-build
+    - git clone git://gitorious.org/qt/qtserialport.git
+    - cd serialport-build&&qmake ../qtserialport/qtserialport.pro
+    - make
+    - sudo make install
+    - cd ..
 #libqt5serialport5-dev - precise not contains this package :/
 script:
     - cd src&&qmake -qt=qt5 -v -o ./Makefile ./SerialChart.pro
