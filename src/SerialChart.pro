@@ -6,9 +6,6 @@ TEMPLATE = app
 LIBS += -lsetupapi
 SOURCES += main.cpp \
     mainwindow.cpp \
-    qextserialport/qextserialport.cpp \
-    qextserialport/qextserialbase.cpp \
-    qextserialport/win_qextserialport.cpp \
     portbase.cpp \
     configuration.cpp \
     chart.cpp \
@@ -21,9 +18,6 @@ SOURCES += main.cpp \
     decoderhdlc.cpp \
     decoderbin.cpp
 HEADERS += mainwindow.h \
-    qextserialport/win_qextserialport.h \
-    qextserialport/qextserialport.h \
-    qextserialport/qextserialbase.h \
     common.h \
     portbase.h \
     configuration.h \
@@ -39,4 +33,4 @@ HEADERS += mainwindow.h \
 FORMS += mainwindow.ui
 RESOURCES += resources.qrc
 OTHER_FILES += notes.txt
-QT += widgets
+QT += widgets serialport

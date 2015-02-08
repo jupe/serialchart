@@ -2,6 +2,7 @@
 #define PORTBASE_H
 
 #include <QObject>
+#include <QThread>
 #include "configuration.h"
 #include "decoderbase.h"
 

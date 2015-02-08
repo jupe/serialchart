@@ -1,9 +1,9 @@
 #ifndef COMMON_H
 #define COMMON_H
 
-//#include <QFileDialog>
+#include <QFileDialog>
 #include <QTextStream>
-//#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include <QList>
 #include <QIODevice>
 #include <QCoreApplication>

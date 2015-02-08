@@ -145,7 +145,7 @@ void MainWindow::on_configurationText_textChanged()
 
 void MainWindow::on_actionAbout_triggered()
 {
-    QMessageBox::about(0,"","Developed by Starlino\nwww.Starlino.com");
+    QMessageBox::about(0,"","Developed by Starlino\nwww.Starlino.com\n\nUpdated by jupe\nwww.github.com/jupe/serialchart");
 }
 
 void MainWindow::on_actionRun_triggered()

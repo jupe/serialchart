@@ -2,7 +2,6 @@
 #define CONFIGURATION_H
 
 #include "common.h"
-#include "./qextserialport/qextserialport.h"
 
 class Configuration : public QObject
 {

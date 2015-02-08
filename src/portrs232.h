@@ -2,7 +2,8 @@
 #define PORTRS232_H
 
 #include "portbase.h"
-#include "./qextserialport/qextserialport.h"
+#include <QtSerialPort/QSerialPort>
+#include <QtSerialPort/QSerialPortInfo>
 
 #define MAX_DATA_LINE_LEN   1024
 
@@ -17,7 +18,7 @@ public:
 
 
 private:
-    QextSerialPort* serialPort;
+    QSerialPort* serialPort;
     bool isRunning;
 
     void portSetup();
