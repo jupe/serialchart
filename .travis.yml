@@ -1,12 +1,18 @@
 before_install:
     - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
-    - sudo add-apt-repository --yes "deb http://archive.ubuntu.com/ubuntu/ saucy main universe"
-    - sudo add-apt-repository --yes "deb http://archive.ubuntu.com/ubuntu/ raring main universe"
+    - sudo add-apt-repository --yes "deb http://archive.ubuntu.com/ubuntu/ trusty universe"
     - sudo apt-get update -qq
     - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libqt5serialport5-dev
 script:
     - cd src&&qmake -qt=qt5 -v -o ./Makefile ./SerialChart.pro
     - qmake -qt=qt5 -o ./Makefile ./SerialChart.pro
     - make
-after_success:
-    - 'curl -XPOST -s -H "Authorization: token ${BUILD_KEY}" -H "Content-Type: application/zip" --data-binary @./serialchart-1.0-SNAPSHOT.zip "https://uploads.github.com/repos/Company/spinsurstaging/releases/456729/assets?name= spinsurstaging'
+#deploy:
+#  provider: releases
+#  api-key: ${GH_OAUTH_TOKEN}
+#  file: 
+#    - "SerialChart"
+#  skip_cleanup: true
+#  on:
+#    tags: true
+#    all_branches: true
