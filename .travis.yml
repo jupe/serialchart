@@ -1,7 +1,8 @@
 before_install:
     - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
+    - sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -sc) universe"
     - sudo apt-get update -qq
-    - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libqtserialport5-dev
+    - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libqt5serialport5-dev
 script:
     - cd src&&qmake -qt=qt5 -v -o ./Makefile ./SerialChart.pro
     - qmake -qt=qt5 -o ./Makefile ./SerialChart.pro
